@@ -63,7 +63,9 @@ class BottomBar extends StatelessWidget{
           width: 75,
           child:
           FlatButton(
-              onPressed: null,
+              onPressed: ()=>{
+                Navigator.pushNamed(context, '/userScreen')
+              },
               child: Column(
                 children: [
                   Image.asset('assets/images/user-avatar_64.png',width: 30,height: 30),

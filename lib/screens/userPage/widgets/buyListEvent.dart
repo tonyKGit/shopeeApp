@@ -1,22 +1,130 @@
 import 'package:flutter/material.dart';
 
-class BuyList extends StatelessWidget{
+class BuyListEvent extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Text('1111最強購物')
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-
-          ],
-        ),
-      ],
+    return Container(
+      color: Colors.white,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text('1111最強購物')
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Text('購買清單')
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+              SizedBox(
+                child:
+                FlatButton(
+                    onPressed: null,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/images/home_64.png',width: 30,height: 30),
+                        Text('首頁',style: TextStyle(fontSize: 15),)
+                      ],
+                    )
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shopee/screens/home/homeScreen.dart';
+import 'package:shopee/screens/userPage/userScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      routes: {
+        '/homeScreen': (context) => HomeScreen(),
+        '/userScreen': (context) => UserScreen(),
+       },
       home: HomeScreen(),
     );
   }
