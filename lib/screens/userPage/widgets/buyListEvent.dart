@@ -76,7 +76,9 @@ class BuyListEvent extends StatelessWidget{
               SizedBox(
                 child:
                 FlatButton(
-                    onPressed: null,
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/buyListScreen');
+                    },
                     child: Column(
                       children: [
                         Image.asset('assets/images/home_64.png',width: 30,height: 30),

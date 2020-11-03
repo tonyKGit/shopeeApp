@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shopee/screens/home/homeScreen.dart';
+import 'package:shopee/screens/buyListPage/buyListScreen.dart';
+import 'package:shopee/screens/registerPage/registerScreen.dart';
 import 'package:shopee/screens/userPage/userScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:shopee/screens/registerPage/smsCertificationScreen.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 
   // SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor:Colors.transparent);
@@ -35,6 +41,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/homeScreen': (context) => HomeScreen(),
         '/userScreen': (context) => UserScreen(),
+        '/buyListScreen': (context) => BuyListScreen(),
+        '/registerScreen': (context) => RegisterScreen(),
+        '/smsCertificationScreen': (context) => SMSCertificationScreen(),
        },
       home: HomeScreen(),
     );

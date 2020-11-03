@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "6277214680",
+    "firebase_url": "https://shopeedb-9f7da.firebaseio.com",
+    "project_id": "shopeedb-9f7da",
+    "storage_bucket": "shopeedb-9f7da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6277214680:android:3af60ad063fc0c585c02ad",
+        "android_client_info": {
+          "package_name": "com.tony.shopee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6277214680-bdk5e8om3rnrs6vvvpuvvjvbsiomn11s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-Fo-D3XObpTSndWvFtxFJ4iusoNB2GAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6277214680-bdk5e8om3rnrs6vvvpuvvjvbsiomn11s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

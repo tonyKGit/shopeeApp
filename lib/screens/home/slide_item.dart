@@ -8,11 +8,6 @@ class SlideItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // Container(
-        //   height: 200,
-        //   color: Colors.orange,
-        //   child: Text(slideList[index].mTitle),
-        // )
         Expanded(
             child: Container(
               height: 200,

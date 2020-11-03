@@ -60,7 +60,10 @@ class _TopBarState extends State<TopBar>{
                     FlatButton(onPressed: null,
                         child: Text('登入')
                     ),
-                    FlatButton(onPressed: null,
+                    FlatButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/registerScreen');
+                        },
                         child: Text('註冊')
                     ),
                   ],
