@@ -32,6 +32,7 @@ dependencies:
   # For example, to use Firebase Authentication and Cloud Firestore
   firebase_auth: ^0.18.2
   cloud_firestore: ^0.14.2
+  flutter_i18n: ^0.20.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -64,6 +65,7 @@ flutter:
     - assets/images/setting_64.png
     - assets/images/user-avatar-info_64.png
     - assets/images/phone-icon_64.png
+    - assets/i18n
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

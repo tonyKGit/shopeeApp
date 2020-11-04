@@ -14,10 +14,10 @@ class _UserScreenState extends State<UserScreen>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.82),
+      backgroundColor: Colors.white.withOpacity(0.90),
       body: ListView(
         children: [
-          TopBar(false),
+          TopBar(true),
           Visibility(
             visible: false,
             maintainSize: false,

@@ -14,6 +14,7 @@ class HomeScreen extends StatefulWidget{
 class _HomeScreenState extends State<HomeScreen>{
 
   int _currentPage = 0;
+  int data = 0;
 
   final PageController _pageController = PageController(
       initialPage: 0
@@ -46,6 +47,13 @@ class _HomeScreenState extends State<HomeScreen>{
     });
   }
 
+  Future <dynamic> _onRefresh(){
+    data = 1;
+    setState(() {
+
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,49 +63,52 @@ class _HomeScreenState extends State<HomeScreen>{
               child:
               Stack(
                 children: [
-                  ListView(
-                    children: [
-                      Stack(
+ //                 RefreshIndicator(
+  //                    child:
+                      ListView(
                         children: [
-                          Container(
-                              height: 200,
-                              child: PageView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  onPageChanged: _onPageChanged,
-                                  controller: _pageController,
-                                  itemCount: slideList.length,
-                                  itemBuilder: (context, i) => SlideItem(i)
-                              )
-                          ),
-                          Container(
-                            height: 200,
-                            child:
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Row(
+                          Stack(
+                            children: [
+                              Container(
+                                  height: 200,
+                                  child: PageView.builder(
+                                      scrollDirection: Axis.horizontal,
+                                      onPageChanged: _onPageChanged,
+                                      controller: _pageController,
+                                      itemCount: slideList.length,
+                                      itemBuilder: (context, i) => SlideItem(i)
+                                  )
+                              ),
+                              Container(
+                                height: 200,
+                                child:
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    SizedBox(width: 10),
-                                    for(int i = 0 ; i < slideList.length ; i++)
-                                      if(i == _currentPage)
-                                        SlideDots(true)
-                                      else
-                                        SlideDots(false)
+                                    Row(
+                                      children: [
+                                        SizedBox(width: 10),
+                                        for(int i = 0 ; i < slideList.length ; i++)
+                                          if(i == _currentPage)
+                                            SlideDots(true)
+                                          else
+                                            SlideDots(false)
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
                                   ],
                                 ),
-                                SizedBox(height: 10),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
+                          SlideMenu(_mController),
+                          Container(height: 300,child: Text('1231'),),
+                          Container(height: 300,child: Text('1231'),),
+                          Container(height: 300,child: Text('1231'),),
+                          Container(height: 300,child: Text('1231'),),
                         ],
                       ),
-                      SlideMenu(_mController),
-                      Container(height: 300,child: Text('1231'),),
-                      Container(height: 300,child: Text('1231'),),
-                      Container(height: 300,child: Text('1231'),),
-                      Container(height: 300,child: Text('1231'),),
-                    ],
-                  ),
+ //                     onRefresh: _onRefresh),
                   Column(
                     children: [
                       SizedBox(height: 40),
