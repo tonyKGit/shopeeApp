@@ -4,6 +4,7 @@ import 'package:shopee/screens/home/homeScreen.dart';
 import 'package:shopee/screens/buyListPage/buyListScreen.dart';
 import 'package:shopee/screens/registerPage/registerScreen.dart';
 import 'package:shopee/screens/userPage/myInfoPage/myInfoScreen.dart';
+import 'package:shopee/screens/userPage/myStorePage/myStoreScreen.dart';
 import 'package:shopee/screens/userPage/userScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shopee/screens/registerPage/smsCertificationScreen.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/registerScreen': (context) => RegisterScreen(),
         '/smsCertificationScreen': (context) => SMSCertificationScreen(),
         '/myInfoScreen': (context) => MyInfoScreen(),
+        '/myStoreScreen' : (context) => MyStoreScreen(),
        },
       home: HomeScreen(),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shopee/models/bottom_bar.dart';
 import 'package:shopee/screens/userPage/inPurchase.dart';
+import 'package:shopee/screens/userPage/tabBarView.dart';
 import 'topBar.dart';
 import 'postWall.dart';
 import 'inPurchase.dart';
@@ -10,39 +12,64 @@ class UserScreen extends StatefulWidget{
 }
 
 class _UserScreenState extends State<UserScreen>{
-  bool mTest = true;
+  bool pressed = true;
+
+  @override
+  void initState(){
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white.withOpacity(0.90),
-      body: ListView(
+      body:Column(
         children: [
-          TopBar(true),
-          Visibility(
-            visible: false,
-            maintainSize: false,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                FlatButton(
-                    onPressed: null,
-                    child: Text('buy')
-                ),
-                FlatButton(
-                    onPressed: () {
-                      mTest = false;
-                      setState(() {
+          Expanded(
+              child: ListView(
+                children: [
+                  TopBar(true),
+                  Visibility(
+                    visible: true,
+                    maintainSize: false,
+                    child: Container(
+                      color: Colors.white,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          FlatButton(
+                              color: Colors.white,
+                              textColor: pressed ? Colors.redAccent : Colors.black,
+                              onPressed: (){
+                                pressed = true;
+                                setState(() {
 
-                      });
-                    },
-                    child: Text('post')
-                ),
-              ],
-            ),
+                                });
+                              },
+                              child: Text('buy')
+                          ),
+                          FlatButton(
+                              textColor: pressed ? Colors.black : Colors.redAccent,
+                              onPressed: () {
+                                pressed = false;
+                                setState(() {
+
+                                });
+                              },
+                              child: Text('post')
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  pressed ? InPurchase() : PostWall(),
+                  // Expanded(child: tabBarView())
+                ],
+              ),
           ),
-        mTest ? InPurchase() : PostWall(),
+          BottomBar()
         ],
-      ),
+      )
     );
   }
 }

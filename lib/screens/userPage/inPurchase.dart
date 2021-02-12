@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopee/screens/userPage/widgets/buyListEvent.dart';
 import 'package:shopee/screens/userPage/widgets/myOption.dart';
+import 'package:shopee/screens/userPage/widgets/settingOption.dart';
 
 class InPurchase extends StatefulWidget{
   @override
@@ -15,7 +16,9 @@ class _InPurchaseState extends State<InPurchase>{
         SizedBox(height: 10),
         BuyListEvent(),
         SizedBox(height: 10),
-        MyOption()
+        MyOption(),
+        SizedBox(height: 10),
+        SettingOption()
       ],
     );
   }

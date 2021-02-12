@@ -3,8 +3,10 @@ import 'package:shopee/models/home/slide-dot.dart';
 import 'package:shopee/models/home/slide.dart';
 import 'package:shopee/screens/home/slide_menu.dart';
 import 'slide_item.dart';
-import 'bottom_bar.dart';
+import '../../models/bottom_bar.dart';
 import 'dart:async';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:badges/badges.dart';
 
 class HomeScreen extends StatefulWidget{
   @override
@@ -24,6 +26,9 @@ class _HomeScreenState extends State<HomeScreen>{
   @override
   void initState(){
     super.initState();
+    // FlutterAppBadger.updateBadgeCount(2);
+    // print("123");
+    // print(FlutterAppBadger.isAppBadgeSupported());
     Timer.periodic(Duration(seconds: 3), (timer) {
       if(_currentPage < 1){
         _currentPage++;
@@ -116,8 +121,9 @@ class _HomeScreenState extends State<HomeScreen>{
                         children: [
                           SizedBox(width: 15) ,
                           Expanded(
-                              flex: 6,
+                              flex: 7,
                               child: Container(
+                                height: 35,
                                 color: Colors.white,
                                 child: Row(
                                   children: [
@@ -133,7 +139,13 @@ class _HomeScreenState extends State<HomeScreen>{
                           ),
                           Expanded(
                             flex: 1,
-                            child: IconButton(icon: Image.asset('assets/images/chat-box_64.png',height: 30,width: 30), onPressed: null),
+                            //child: IconButton(icon: Image.asset('assets/images/chat-box_64.png',height: 30,width: 30), onPressed: null),
+                            child: Badge(
+                              badgeContent: Text("3"),
+                              child: Icon(Icons.chat),
+                              position: BadgePosition.topEnd(top:-10,end:3),
+                              //child: IconButton(icon: Image.asset('assets/images/chat-box_64.png',height: 30,width: 30), onPressed: null),
+                            ),
                           ),
                         ],
                       )

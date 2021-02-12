@@ -8,14 +8,15 @@ class TopBar extends StatefulWidget{
 }
 
 class _TopBarState extends State<TopBar>{
+  String userAccount = "user account";
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(height: 200,color: Colors.orange),
+        Container(height: 170,color: Colors.orange),
         Column(
           children: [
-            SizedBox(height: 15,),
+            SizedBox(height: 5,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -38,7 +39,9 @@ class _TopBarState extends State<TopBar>{
                                 topRight: Radius.circular(15.0),
                               ),
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.pushNamed(context, '/myStoreScreen');
+                            },
                             color: Colors.white,
                             child: Text(
                                 '我的賣場   〉'
@@ -52,25 +55,41 @@ class _TopBarState extends State<TopBar>{
                   children: [
                     Visibility(
                       visible: widget.isLogin,
-                      child: IconButton(icon: Image.asset('assets/images/setting_64.png',height: 30,width: 30), onPressed: null),
+                      child: IconButton(icon: Image.asset('assets/images/setting_64.png',height: 25,width: 25), onPressed: null),
                     ),
-                    IconButton(icon: Image.asset('assets/images/shopping-cart_64.png',height: 30,width: 30), onPressed: null),
-                    IconButton(icon: Image.asset('assets/images/chat-box_64.png',height: 30,width: 30), onPressed: null)
+                    IconButton(icon: Image.asset('assets/images/shopping-cart_64.png',height: 25,width: 25), onPressed: null),
+                    IconButton(icon: Image.asset('assets/images/chat-box_64.png',height: 25,width: 25), onPressed: null)
                   ],
                 )
               ],
             ),
-            SizedBox(height: 80),
+            SizedBox(height: 5),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     SizedBox(width: 15,),
-                    IconButton(icon: Image.asset('assets/images/user-avatar-info_64.png',height: 50,width: 50),
+                    // IconButton(iconSize:150,icon: Image.asset('assets/images/user-avatar-info_64.png'),
+                    //     onPressed: (){
+                    //   Navigator.pushNamed(context, '/myInfoScreen');
+                    //     }),
+                    SizedBox(
+                      height: 90,
+                      width: 90,
+                      child: IconButton(
+                        icon: Image.asset('assets/images/user-avatar-info_64.png'),
                         onPressed: (){
-                      Navigator.pushNamed(context, '/myInfoScreen');
-                        }),
+                          Navigator.pushNamed(context, '/myInfoScreen');
+                        },
+                      ),
+                    ),
+                    Column(
+                      children: [
+                        Text('$userAccount'),
+                        Text("粉絲 0 | 關注中 0")
+                      ],
+                    ),
                   ],
                 ),
                 Visibility(

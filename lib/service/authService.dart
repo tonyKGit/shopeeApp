@@ -21,7 +21,6 @@ class AuthService{
           return 'error';
         },
         codeSent: (String verificationId, [int forceResendingToken]){
-          print('123');
           final _codeController = TextEditingController();
           showDialog(
               context: context,
