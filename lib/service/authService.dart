@@ -10,7 +10,6 @@ class AuthService{
         phoneNumber: phone,
         timeout: Duration(seconds: 10),
         verificationCompleted: (AuthCredential authCredential){
-          print('123');
           _firebaseAuth.signInWithCredential(authCredential).then((value){
             Navigator.of(context).pushNamed('/smsCertificationScreen');
           }).catchError((e){
@@ -40,7 +39,6 @@ class AuthService{
                             smsCode: _codeController.text.trim());
                         _firebaseAuth.signInWithCredential(_credential).then((value){
                           //Navigator.of(context)
-                          print('123');
                           Navigator.of(context).pushNamed('/smsCertificationScreen',arguments: 'success');
                         }).catchError((e){
                           return 'error';

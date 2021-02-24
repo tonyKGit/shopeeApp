@@ -18,7 +18,8 @@ class _InPurchaseState extends State<InPurchase>{
         SizedBox(height: 10),
         MyOption(),
         SizedBox(height: 10),
-        SettingOption()
+        SettingOption(),
+        SizedBox(height: 3),
       ],
     );
   }

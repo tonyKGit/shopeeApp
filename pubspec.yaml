@@ -31,6 +31,10 @@ dependencies:
   firebase_analytics: ^5.0.2
   flutter_app_badger: ^1.1.2
   badges: ^1.1.6
+  unicorndial: ^1.1.5
+  image_picker: ^0.6.7+22
+  rxdart: ^0.25.0
+  provider: ^4.3.3
 
   # Add the dependencies for any other Firebase products you want to use in your app
   # For example, to use Firebase Authentication and Cloud Firestore
@@ -75,6 +79,8 @@ flutter:
     - assets/images/delivery_64.png
     - assets/images/shopping-bag_64.png
     - assets/images/logistics_64.png
+    - userPostsSample.json
+  
 
   # To add assets to your application, add an assets section, like this:
   # assets:

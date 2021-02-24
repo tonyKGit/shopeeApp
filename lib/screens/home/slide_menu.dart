@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlideMenu extends StatelessWidget{
-  final ScrollController _mController;
-  SlideMenu(this._mController);
+  final _mController = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -54,7 +53,7 @@ class SlideMenu extends StatelessWidget{
                               children: [
                                 Image.asset("assets/images/logistics_64.png",width: 30,height: 30),
                                 SizedBox(height: 5),
-                                Text("免運！蝦皮直送",style: TextStyle(fontSize: 12))
+                                Text("蝦皮商城",style: TextStyle(fontSize: 12))
                               ],
                             ),
                           )
@@ -67,7 +66,7 @@ class SlideMenu extends StatelessWidget{
                               children: [
                                 Image.asset("assets/images/logistics_64.png",width: 30,height: 30),
                                 SizedBox(height: 5),
-                                Text("免運！蝦皮直送",style: TextStyle(fontSize: 12))
+                                Text("蝦皮電子",style: TextStyle(fontSize: 12))
                               ],
                             ),
                           )
@@ -85,7 +84,7 @@ class SlideMenu extends StatelessWidget{
                               children: [
                                 Image.asset("assets/images/logistics_64.png",width: 30,height: 30),
                                 SizedBox(height: 5),
-                                Text("免運！蝦皮直送",style: TextStyle(fontSize: 12))
+                                Text("蝦選榜",style: TextStyle(fontSize: 12))
                               ],
                             ),
                           )
@@ -110,7 +109,7 @@ class SlideMenu extends StatelessWidget{
                               children: [
                                 Image.asset("assets/images/logistics_64.png",width: 30,height: 30),
                                 SizedBox(height: 5),
-                                Text("免運！蝦皮直送",style: TextStyle(fontSize: 12))
+                                Text("蝦皮超市",style: TextStyle(fontSize: 12))
                               ],
                             ),
                           )
@@ -123,7 +122,7 @@ class SlideMenu extends StatelessWidget{
                               children: [
                                 Image.asset("assets/images/logistics_64.png",width: 30,height: 30),
                                 SizedBox(height: 5),
-                                Text("免運！蝦皮直送",style: TextStyle(fontSize: 12))
+                                Text("蝦皮團購",style: TextStyle(fontSize: 12))
                               ],
                             ),
                           )

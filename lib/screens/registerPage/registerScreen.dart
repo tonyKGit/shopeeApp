@@ -56,18 +56,9 @@ class _RegisterScreenState extends State<RegisterScreen>{
                     color: Colors.orange,
                     child: FlatButton (
                       onPressed: () async{
-                        // try{
-                        //   final user  = await AuthService.signInWithEmail('test@123.com', '123456');
-                        //   if(user != null){
-                        //     print('not null');
-                        //   }
-                        // }catch(e){
-                        //   print(e);
-                        // }
-
                         if(numberController.text != null && numberController.text != ''){
                           AuthService auth = AuthService();
-                          var result = await AuthService().createUserWithPhone(numberController.text.trim(),context);
+                          var result = await auth.createUserWithPhone(numberController.text.trim(),context);
                           print(result);
                         }
                       },

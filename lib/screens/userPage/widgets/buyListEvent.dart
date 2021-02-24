@@ -67,8 +67,35 @@ class BuyListEvent extends StatelessWidget{
           // ),
           Row(
             children: [
-              Text('購買清單')
+              Flexible(
+                child: FlatButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, '/buyListScreen',arguments: 3);
+                  },
+                  shape: Border(
+                      bottom: BorderSide(
+                          color: Colors.black.withOpacity(0.2),width: 0.5
+                      )
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(height: 15,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text("購買清單"),
+                          Text("查看全部 >")
+                        ],
+                      ),
+                      SizedBox(height: 15,),
+                    ],
+                  )
+                ),
+              ),
             ],
+          ),
+          SizedBox(
+            height: 15,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +105,7 @@ class BuyListEvent extends StatelessWidget{
                 FlatButton(
                     onPressed: (){
                       //pass page to buyListScreen
-                      Navigator.pushNamed(context, '/buyListScreen',arguments: 2);
+                      Navigator.pushNamed(context, '/buyListScreen',arguments: 0);
                     },
                     child: Column(
                       children: [
@@ -91,7 +118,9 @@ class BuyListEvent extends StatelessWidget{
               SizedBox(
                 child:
                 FlatButton(
-                    onPressed: null,
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/buyListScreen',arguments: 1);
+                    },
                     child: Column(
                       children: [
                         Image.asset('assets/images/home_64.png',width: 30,height: 30),
@@ -103,7 +132,9 @@ class BuyListEvent extends StatelessWidget{
               SizedBox(
                 child:
                 FlatButton(
-                    onPressed: null,
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/buyListScreen',arguments: 2);
+                    },
                     child: Column(
                       children: [
                         Image.asset('assets/images/home_64.png',width: 30,height: 30),
@@ -115,7 +146,9 @@ class BuyListEvent extends StatelessWidget{
               SizedBox(
                 child:
                 FlatButton(
-                    onPressed: null,
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/buyListScreen',arguments: 3);
+                    },
                     child: Column(
                       children: [
                         Image.asset('assets/images/home_64.png',width: 30,height: 30),
@@ -126,6 +159,7 @@ class BuyListEvent extends StatelessWidget{
               ),
             ],
           ),
+          SizedBox(height: 15,)
         ],
       ),
     );

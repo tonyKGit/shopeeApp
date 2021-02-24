@@ -26,9 +26,7 @@ class _HomeScreenState extends State<HomeScreen>{
   @override
   void initState(){
     super.initState();
-    // FlutterAppBadger.updateBadgeCount(2);
-    // print("123");
-    // print(FlutterAppBadger.isAppBadgeSupported());
+
     Timer.periodic(Duration(seconds: 3), (timer) {
       if(_currentPage < 1){
         _currentPage++;
@@ -106,11 +104,11 @@ class _HomeScreenState extends State<HomeScreen>{
                               ),
                             ],
                           ),
-                          SlideMenu(_mController),
-                          Container(height: 300,child: Text('1231'),),
-                          Container(height: 300,child: Text('1231'),),
-                          Container(height: 300,child: Text('1231'),),
-                          Container(height: 300,child: Text('1231'),),
+                          SlideMenu(),
+                          Container(height: 300,child: Text('Page2'),),
+                          Container(height: 300,child: Text('Page3'),),
+                          Container(height: 300,child: Text('Page4'),),
+                          Container(height: 300,child: Text('Page5'),),
                         ],
                       ),
  //                     onRefresh: _onRefresh),
@@ -154,7 +152,7 @@ class _HomeScreenState extends State<HomeScreen>{
                 ],
               ),
           ),
-          BottomBar(),
+          BottomBar("HomeScreen"),
         ],
       ),
     );

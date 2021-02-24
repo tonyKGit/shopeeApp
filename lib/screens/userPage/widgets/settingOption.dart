@@ -38,11 +38,6 @@ class SettingOption extends StatelessWidget{
             ),
           ),
           FlatButton(
-            shape: Border(
-                bottom: BorderSide(
-                    color: Colors.black.withOpacity(0.2),width: 0.5
-                )
-            ),
             onPressed: null,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -9,6 +9,6 @@ class Slide{
 }
 
 final slideList = [
-  Slide(mTitle: '1'),
-  Slide(mTitle: '2')
+  Slide(mTitle: 'First page'),
+  Slide(mTitle: 'Second page')
 ];
